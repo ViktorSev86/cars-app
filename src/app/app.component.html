@@ -42,7 +42,7 @@
 
       <div class="car-item" *ngFor="let car of carsData">
         <div class="car-item-image">
-          <img src="assets/images/{{car.image}}" alt="Image">
+          <img src="{{car.image}}" alt="Image">
         </div>
         <div class="car-item-title">{{car.name}}</div>
         <div class="car-item-info">
@@ -81,9 +81,9 @@
       <input type="text" class="price-input" id="name" placeholder="Ваше имя" formControlName="name">
       <input type="text" class="price-input" id="phone" placeholder="Ваш телефон" formControlName="phone">
       <input type="text" class="price-input" id="car" placeholder="Автомобиль, который вас интересует" formControlName="car">
-      <button class="button" id="price-action" (click)="onSubmit()" type="button" [disabled]="!priceForm.valid">Узнать цену</button>
+      <button class="button" id="price-action" (click)="onSubmit()" type="button">Узнать цену</button>
     </form>
-    <img src="../assets/images/rolls.png" alt="Rolls" class="price-image" [ngStyle]="trans">
+    <img src="assets/images/rolls.png" alt="Rolls" class="price-image" [ngStyle]="trans">
   </div>
 </section>
 
